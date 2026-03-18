@@ -1,0 +1,20 @@
+Arquivos recuperados:
+- recovered_src\main.py
+- recovered_src\services\license.py
+
+Observacoes:
+- Este diretorio parece ser a extracao de um executavel PyInstaller.
+- Editar apenas os .pyc extraidos normalmente nao recompõe o .exe original.
+- O caminho pratico e recompilar os fontes em Python 3.12 e depois reconstruir o app.
+
+Comandos uteis em uma maquina com Python 3.12:
+
+1. Compilar para pyc:
+   py -3.12 -m compileall -b recovered_src
+
+2. Copiar os pyc gerados:
+   recovered_src\main.pyc -> main.pyc
+   recovered_src\services\license.pyc -> PYZ.pyz_extracted\services\license.pyc
+
+3. Se precisar refazer o executavel:
+   reconstruir com PyInstaller a partir dos fontes recuperados.
